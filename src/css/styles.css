@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #F2F6D0;
+    --secondary-color: #443627;
+    --tertiary-color: #083D77;
+    --accent-color: #D98324;
+    --neutral-color: #EFDCAB;
+
+    --general-font: "Instrument Serif", serif;
+    --secondary-font: "Forum", serif;;
+    --header-font-clr: var(--primary-color);
+    --header-height: 12vh;
+
+    --footer-background: url('/src/assets/image/footer-background.jpg');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+header {
+    height: var(--header-height);
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+    z-index: 10;
+}
+
+header.scrolled {
+    background-color: var(--secondary-color);
+}
+
+header nav{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2vh;
+    font-family: "Instrument Serif", serif;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.title,
+.nav-btn p {
+    font-family: var(--general-font);
+    color: var(--header-font-clr);
+    text-shadow: 5px 5px 5px rgb(0,0,0,0.5);
+    width: 30vw;
+    text-align: center;
+}
+
+.title {
+    font-weight: 100;
+    font-size: 5vw;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.nav-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.nav-btn p {
+    font-size: 2vw;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-btn p:hover {
+    transform: scale(1.1);
+    color: var(--neutral-color);
+}
+
+footer {
+    width: 100%;
+    height: min-content;
+    padding-top: 10%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#footer-content {
+    background: linear-gradient(to bottom, var(--primary-color) 10%, transparent), var(--footer-background);
+    background-position-y: 70%;
+    background-position-x: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 35vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    padding: 9% 3% 3% 3%;
+}
+
+#footer-content::before {
+    content: '';
+    background: linear-gradient(to top, black 60%, transparent);
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.project-info,
+.info-text {
+    font-family: var(--general-font);
+    font-size: 1.2vw;
+    color: var(--primary-color);
+    text-shadow: 4px 4px 5px rgb(0,0,0);
+    z-index: 100;
+}
+
+.project-info {
+    flex: 1;
+    display: flex;
+    gap: 1vw;
+    justify-content: center;
+    align-items: center;
+    max-width: 20%;
+}
+
+.restaurant-info {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    gap: 1vw;
+    border-width: 0 2px 0 2px;
+    border-style: solid;
+    border-color: var(--primary-color);
+    padding: 0 2vw;
+    align-items: stretch;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.restaurant-info ul li {
+    list-style: none;
+}
+
+.social-media {
+    display: flex;
+    gap: 2vw;
+}
+
+ 
+#footer-content a {
+    text-decoration: none;
+    z-index: 100;
+}
+
+.social {
+    width: 3.5vw;
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(85%) saturate(318%) hue-rotate(8deg) brightness(100%) contrast(95%)
+            drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.7));
+    z-index: 100;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social:hover,
+a:hover > .social{
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(95%) sepia(13%) saturate(997%) hue-rotate(331deg) brightness(97%) contrast(92%);
+}
+
+.social.instagram {
+    width: 3vw;
+}
