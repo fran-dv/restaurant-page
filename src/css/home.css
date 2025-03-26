@@ -1,0 +1,115 @@
+.bg-video-container {
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#bg-video {
+    position: sticky;
+}
+
+.down-arrow {
+    position: absolute;
+    z-index: 1;
+    width: 5vw;
+    bottom: 20px;
+    left: 50%;
+    opacity: 0;
+    visibility: hidden;
+    animation-duration: 1s;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+    cursor: pointer;
+    transition: opacity 1s ease, visibility 0s ease 1s;
+}
+
+.down-arrow.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: transform 0.3s ease-in-out, opacity 1s ease, visibility 0s ease;
+    animation: bounce 1s 3s;
+}
+
+
+.down-arrow:hover {
+    transform: scale(1.2);
+}
+
+#about-us {
+    margin-top: calc(100vh - var(--header-height));
+    background-color: var(--primary-color);
+    width: 100%;
+}
+
+.about-block {
+    display: flex;
+    justify-content: center;
+    padding: 10% 10% 0 10%;
+    gap: 0;
+}
+
+.about-block .image-left,
+.about-block .image-right {
+    width: 50%;
+    border-radius: 1%;
+}
+
+.about-block .image-left {
+    margin-right: -7%;
+}
+
+.about-block .image-right {
+    margin-left: -7%;
+}
+
+.text-block {
+    font-family: var(--secondary-font);
+    align-self: center;
+    width: 45%;
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+    padding: 2%;
+    border-radius: 1%;
+    z-index: 1;
+}
+
+.about-block h2 {
+    width: 80%;
+    font-size: 3vw;
+    border-bottom: 2px solid var(--neutral-color);
+}
+
+.about-block p {
+    font-size: 1.5vw;
+    margin-top: 2%;
+
+}
+
+.cta {
+    border: none;
+    background-color: var(--tertiary-color);
+    padding: 1vw 1.7vw;
+    border-radius: 3%;
+    position: fixed;
+    bottom: 2%;
+    right: 1%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+
+.cta.visible {
+    opacity: 1;
+    animation: pulse 2s 0.2s;
+}
+
+.cta p {
+    font-family: var(--general-font);
+    font-size: 1.5vw;
+    color: var(--primary-color);
+}

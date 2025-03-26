@@ -1,0 +1,128 @@
+#menu {
+    /* background-image: url(); */
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu h1 {
+    font-family: var(--secondary-font);
+    font-size: 3vw;
+    color: var(--secondary-color);
+    padding: 1%;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.menu-nav {
+    width: 40%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
+
+.menu-nav button {
+    width: 33%;
+    height: 100%;
+    background: none;
+    border: none;
+    padding: 2% 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.menu-nav button:hover > p {
+    color: var(--neutral-color);
+}
+
+.menu-nav .menu-tab.selected:hover > p {
+    color: var(--primary-color);
+}
+
+.menu-nav p {
+    font-family: var(--secondary-font);
+    font-size: 1.5vw;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.menu-nav > .selected {
+    background-color: var(--accent-color);
+    
+}
+
+.menu-content {
+    background-color: var(--neutral-color);
+    margin-top: 3%;
+    width: 70%;
+    
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border-radius: 1rem;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    max-width: 100%;
+}
+
+.option {
+    max-width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 8vw;
+    margin-bottom: 3%;
+}
+
+.name,
+.description,
+.price {
+    font-family: var(--general-font);
+    font-size: 1.4vw;
+}
+
+.option .name {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 1.9vw;
+    text-decoration: underline 2px var(--accent-color);
+}
+
+.option .description {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.option .price {
+    grid-column: 2;
+    grid-row: 1 / -1;
+    font-size: 1.7vw;
+    justify-self: center;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.option .price::before {
+    content: '€';
+}
+
+.menu-image {
+    grid-column: 2;
+}
+
+.menu-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 1rem 1rem 0;
+}
+
