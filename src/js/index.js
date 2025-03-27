@@ -1,7 +1,9 @@
 import '/src/css/styles.css';
 import 'animate.css';
+
 import { loadHome, destroyHome } from './home.js';
 import { loadMenu, destroyMenu, changeMenuTab } from './menu.js';
+import { loadReservations, destroyReservations } from './reservations.js';
 
 const destroyMainContent = () => {
     const main = document.querySelector('#dynamic-main');
@@ -21,6 +23,9 @@ const resetMainElement = () => {
             break;
         case 'menu':
             destroyMenu();
+            break;
+        case 'reservations':
+            destroyReservations();
             break;
     };
     const main = document.querySelector('#dynamic-main');
@@ -49,7 +54,8 @@ document.body.addEventListener('click', (e) => {
             }
             break;
         case 'go-reservations':
-            if (getCurrentSection() !== 'reservations'){
+
+            if (getCurrentSection() !== 'reservations') {
                 resetMainElement();
                 loadReservations();
             }

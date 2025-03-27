@@ -1,0 +1,89 @@
+#reservations {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#reservations h1 {
+    font-family: var(--secondary-font);
+    font-size: 3vw;
+    letter-spacing: 5px;
+    color: var(--secondary-color);
+    padding: 1%;
+}
+
+#reservation-form {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 3%;
+    border-radius: 1rem;
+    background-color: var(--neutral-color);
+    gap: 1vw;
+}
+
+#reservation-form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+input,
+label,
+textarea {
+    font-family: var(--secondary-font);
+    font-size: 2vw;
+    
+}
+
+textarea,
+input {
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    padding: 1%;
+}
+
+textarea {
+    max-width: 100%;
+    max-height: 50vh;
+}
+
+#submit-form {
+    background-color: var(--accent-color);
+    border-color: var(--secondary-color);
+    border: none;
+    padding: 2%;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#submit-form > p {
+    font-family: var(--secondary-font);
+    font-size: 2vw;
+    color: var(--primary-color);
+}
+
+#submit-form:hover > p {
+    color: var(--neutral-color);
+    
+}
+
+
+.confirmed {
+
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.reservation-name {
+    
+}
